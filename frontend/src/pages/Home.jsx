@@ -18,7 +18,7 @@ const RenderCards = ({ data, title }) => {
 const Home = () => {
 
   const fetcher = (url) => fetch(url).then(res => res.json());
-  const { data, isError, isLoading } = useSWR("http://localhost:5000/api/v1/post/", fetcher);
+  const { data, isError, isLoading } = useSWR("https://dall-e-server-cgjs.onrender.com/api/v1/post/", fetcher);
 
   const [post, setPost] = useState({});
   const [searchText, setSearchText] = useState("");
